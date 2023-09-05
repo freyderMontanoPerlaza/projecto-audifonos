@@ -1,179 +1,239 @@
-
-
 /*Google  fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto:wght@400;700;900&display=swap");
 
-/* variables */
-:root{
+:root {
     /* funtes principales */
-    --fontSecondary: 'Roboto', sans-serif; 
-    --fontMain: 'Lato', sans-serif;
+    --fontSecondary: "Roboto", sans-serif;
+    --fontMain: "Lato", sans-serif;
 
     /* paleta de colores */
-    --primary-color:#1073BA;
-    --secundary-color:#00DA55;
-    --grey:#3b3b3b;
-    --white_color:#FFFF;
-    --black-color:#1f1f1f;
-    --ligh-grey:#e1e1e1;
+    --primary-color: #1073ba;
+    --secundary-color: #00da55;
+    --grey: #3b3b3b;
+    --white-color: #ffff;
+    --black-color: #1f1f1f;
+    --ligh-grey: #e1e1e1;
 
+    --separacion: 5rem;
 }
 
-/* reset */
-html{
+html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
 
 *,
 *:before,
-*:after{
-box-sizing: inherit;
+*:after {
+    box-sizing: inherit;
 }
 
-body{
+body {
     font-family: var(--fontMain);
-    font-size: 1.6rem;
+    font-size: 2.7rem;
     line-height: 1.5;
 }
 
-/* globales */
-.container{
-    max-width: 120rem;
+/** Globales **/
+.container {
     width: 90%;
-    margin-left: auto;
+    max-width: 120rem;
     margin-right: auto;
+    margin-left: auto;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     font-weight: 900;
     font-family: var(--fontSecondary);
-    margin: calc(5rem/2);
+    margin: calc(var(--separacion) / 2) 0;
 }
-h1{
+
+h1 {
     font-size: 4.4rem;
 }
-h1{
+
+h2 {
     font-size: 3.6rem;
 }
-h1{
+
+h3 {
     font-size: 2.8rem;
 }
 
-img{
+img {
     max-width: 100%;
     display: block;
     height: auto;
 }
 
-/* utilidades */
-.text-center{
+/** Utilidades **/
+.text-center {
     text-align: center;
 }
 
+/** Degradados **/
 
-.green-gradient{
+.green-gradient {
     color: transparent;
-    background: linear-gradient(to right, var(--primary-color) 0%, var(--secundary-color) 100%);
+    background: linear-gradient(to right,
+            var(--primary-color) 0%,
+            var(--secundary-color) 100%);
     -webkit-background-clip: text;
     background-clip: text;
 }
 
-/* para este proyectos vamo a utilizar modulos */
-
-/* header  */
-
-.header{
-    padding: calc( 5rem * 3) 0;
-    padding: calc(5rem * 3) 0;
+/* Header **/
+.header {
+    background-color: var(--black-color);
+    padding: calc(var(--separacion) * 3) 0;
+    color: var(--white-color);
 }
 
+.header-audifono-2 img {
+    margin: 0 auto;
+}
 
-
-@media (min-width: 720px )  {       
-    .container-header{
+@media (min-width: 768px) {
+    .container-header {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem;
-    } 
- } 
+    }
+}
 
- .texto-header{
+.texto-header {
     text-align: center;
- }
- 
-@media (min-width: 720px )  {       
-    .texto-header{
+    padding-top: var(--separacion);
+}
+
+@media (min-width: 768px) {
+    .texto-header {
         text-align: left;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-     }
- } 
+        padding: 0;
+    }
+}
 
- .texto-header{
+.texto-header p {
     margin: 0;
-    font-style: 4rem;
- }
+}
 
- .tagline-producto{
-    font-size: 7rem;
+.tagline-producto {
+    font-size: 5rem;
     font-weight: 900;
- }
+}
 
- .name-producto{
-    font-size: 4rem;
-    font-weight: 900;
-    margin: 0;
- }
- 
- @media (min-width: 720px )  {       
-    .tagline-producto{
-        font-size: 8rem;
-       
-     }
- } 
-
- .price-producto span{
+.name-producto {
     font-size: 6rem;
-    font-weight: bold;
- }
+    margin: 0;
+}
 
- .price-producto{
-    color: #6a6a6d;
- }
+@media (min-width: 768px) {
+    .name-producto {
+        font-size: 14rem;
+        line-height: 1;
+    }
+}
 
+.price-producto span {
+    font-size: 6rem;
+    font-weight: 900;
+}
 
+/* Iconos */
+.icons {
+    padding: var(--separacion) 0;
+}
 
- /* Iconos */
- @media (min-width: 720px )  {   
+@media (min-width: 768px) {
+    .icons {
+        display: flex;
+        gap: 2rem;
+    }
+}
 
-   .icons{
-    display: flex;
-    gap: 2rem;
+.icon {
     text-align: center;
-   }
- } 
+    margin-bottom: calc(var(--separacion) / 2);
+}
 
- .icon{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-flex: 1;
+.icon:last-of-type {
+    margin: 0;
+}
 
- }
+@media (min-width: 768px) {
+    .icon {
+        margin: 0;
+    }
+}
 
- 
- .icons img{
-    width: 5.7rem;
+.icon img {
+    width: 8rem;
     margin: 0 auto;
- }
+}
 
-  
- .icons h3{
+.icon h3 {
     color: var(--primary-color);
     text-transform: uppercase;
-    margin-top: calc(3rem  / 2);
- }
+    margin-top: calc(var(--separacion) / 2);
+    font-size: 3.2rem;
+}
+
+/* sobre nosotros TuneMasters*/
+
+.about-TuneMasters {
+    background-image: linear-gradient(to bottom,
+            transparent 50%,
+            var(--primary-color) 0%),
+        url("../img/imagen-mujer.jpg");
+    background-position: right;
+    background-repeat: repeat, no-repeat;
+    background-size: 100%, 210rem;
+}
+
+@media (min-width: 768px) {
+    .about-TuneMasters {
+        background-image: linear-gradient(to left,
+                transparent 50%,
+                var(--primary-color) 0%),
+            url("../img/imagen-mujer.jpg");
+        background-repeat: repeat, no-repeat;
+    }
+}
+
+.about-TuneMasters-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: var(--separacion);
+}
+
+@media (min-width: 768px) {
+    .about-TuneMasters-grid {
+        grid-template-rows: unset;
+        /* para eliminar los row que van de arriba hacia abajo*/
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: var(--separacion);
+    }
+}
+
+.text-about-TuneMasters {
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    color: var(--white-color);
+}
+
+.text-about-TuneMasters h2 {
+    font-size: 5.6rem;
+}
+
+.text-about-TuneMasters p {
+    font-size: 2.7rem;
+    line-height: 2;
+}
