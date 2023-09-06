@@ -237,3 +237,82 @@ img {
     font-size: 2.7rem;
     line-height: 2;
 }
+
+
+
+
+
+
+/* section ofertas */
+
+.offers h2{
+    text-align: center;
+    font-size: 5.7rem;
+    margin-top: 12rem;
+}
+
+.categorie{
+    text-align: center;
+    padding-bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.categorie .categorie-price{
+    font-weight: bold;
+    font-size: 3rem;
+    color: #414641;
+    margin: 0;
+}
+.categorie .categorie-name{
+
+    font-size: 2.4rem;
+    color: #3b3b3b;
+    font-weight: bold;
+    margin: 0;
+}
+.categorie .categories-img{
+    width: 70%;
+    cursor: pointer;
+}
+.categorie{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px )  { 
+    .categories{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+    }
+
+@media (min-width: 1200px )  { 
+    .categories{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+
+    }
+ } 
+ } 
+
+
+ /* swipper slider nuestros mejores productos */
+
+.img-box img{
+    max-width: 100%;
+
+}
+
+.card-slider{
+    padding: 7rem 0;
+}
+.img-box{
+    display: flex;
+    justify-content: center;
+}
+.swiper-wrapper{
+    text-align: center;
+}
