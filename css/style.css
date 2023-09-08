@@ -507,8 +507,93 @@ background-repeat: no-repeat;
 
  .text-newsletter{
     width: 87%;
-
+    text-align: center;
  }
+ @media (min-width: 768px )  {
+     .text-newsletter{
+         text-align: left;
+        }
+ } 
+
+.box-client{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients .headeing{
+    font-size: 4.7rem;
+    color: var(--primary-color);
+}
+
+.clients{
+    margin-top: 45rem;
+}
+
+@media (min-width: 768px )  {
+    .clients{
+        margin-top: 10rem;
+    } 
+    
+ } 
+.clients .container .box{
+    border: 1px solid  rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    background-color: var(--white-color);
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    border-radius: .5rem;
+    flex: 1 1 30rem;
+}
+
+
+.clients .container .box  .client img{
+
+    border-radius: 50%;
+    object-fit: cover;
+    height: 14rem;
+    width: 14rem;
+    margin: 2rem auto;
+}
+
+.clients .container .box  .client h3{
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.clients .container .box  .client .stars i{
+    color: var(--primary-color);
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+
+.clients .container .box  .client .comments{
+    color: #333;
+    font-size: 2.3rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
  /* footer */
